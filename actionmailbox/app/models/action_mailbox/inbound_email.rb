@@ -27,7 +27,7 @@ module ActionMailbox
   class InboundEmail < ActiveRecord::Base
     self.table_name = "action_mailbox_inbound_emails"
 
-    include Incineratable, MessageId, Routable
+    #include Incineratable, MessageId, Routable
 
     has_one_attached :raw_email
     enum status: %i[ pending processing delivered failed bounced ]
